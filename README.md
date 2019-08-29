@@ -1,5 +1,8 @@
 # Rational Recurrences
 
-PyTorch implementation for [Rational Recurrences](https://homes.cs.washington.edu/~hapeng/paper/peng2018rational.pdf).
+PyTorch implementation for RNN Architecture Learning with Sparse Regularization, Dodge et al., EMNLP 2019.
 
-Documentation coming soon.
+An example experiment can be run using classification/example_command.sh
+
+
+
