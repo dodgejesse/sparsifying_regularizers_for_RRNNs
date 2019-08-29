@@ -1,0 +1,21 @@
+description: An LM experiment using a rational recurrence model; baseline model (2-gram)
+tasks:
+  - name: testing_training
+    spec:
+      blueprint: roys-rr
+      resultPath: /output
+      requirements:
+        gpuCount: 1
+      datasetMounts:
+        - datasetId: ptb_lm
+          containerPath: /data
+      env:
+        PATTERN: "2-gram;2-gram"
+        D_OUT: "1080;1080"
+        EMB_SIZE: 250
+        SEED: 1234
+        LEARNED_STRUCTURE: none
+        SEMIRING: plus_times
+        IN_OUT_DROPOUT: 0.2
+      args:
+        - language_model/run_beaker_lm.sh
